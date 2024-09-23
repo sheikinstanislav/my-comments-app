@@ -18,7 +18,7 @@ const CommentsPage: React.FC = () => {
   }, [dispatch, comments.length]);
 
   return (
-    <div className="mx-auto w-full flex justify-center">
+    <div className="flex justify-center">
       <div className="container mx-auto p-4">
         <h1 className="text-2xl font-bold mb-4">Список коментарів</h1>
         {loading && <p>Завантаження...</p>}

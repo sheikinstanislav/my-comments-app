@@ -14,6 +14,13 @@ const store = configureStore({
   reducer: {
     comments: persistedReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: ['persist/PERSIST'],
+        ignoredPaths: ['comments.someNonSerializablePath'],
+      },
+    }),
 });
 
 const persistor = persistStore(store);

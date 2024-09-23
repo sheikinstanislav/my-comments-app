@@ -8,7 +8,7 @@ const App: React.FC = () => {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <div className="App w-full">
+        <div className="App">
           <CommentsPage />
         </div>
       </PersistGate>
