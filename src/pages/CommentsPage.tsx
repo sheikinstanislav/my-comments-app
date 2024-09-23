@@ -6,7 +6,7 @@ import CommentList from '../components/CommentsList';
 import CommentForm from '../components/CommentForm';
 
 const CommentsPage: React.FC = () => {
-  const dispatch = useDispatch<AppDispatch>(); // Типізуйте dispatch
+  const dispatch = useDispatch<AppDispatch>();
   const { comments, loading, error } = useSelector(
     (state: RootState) => state.comments
   );
